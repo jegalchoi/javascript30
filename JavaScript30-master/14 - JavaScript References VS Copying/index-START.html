@@ -25,6 +25,13 @@
     // Why? It's because that is an array reference, not an array copy. They both point to the same array!
 
     // So, how do we fix this? We take a copy instead!
+    const team2 = players.slice();
+    const team3 = [].concat(players);
+    const team4 = [...players];
+    const team5 = Array.from(players);
+    console.log(team2);
+    console.log(team3);
+    console.log(team4);
 
     // one way
 
@@ -45,11 +52,20 @@
     // and think we make a copy:
 
     // how do we take a copy instead?
+    const person2 = Object.assign({}, person, { number: 99 });
+    const person3 = {...person};
+    console.log(person);
+    console.log(person2);
+    console.log(person3);
 
     // We will hopefully soon see the object ...spread
 
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
 
+    const dev = Object.assign({}, person2);
+    const dev2 = JSON.parse(JSON.stringify(person));
+    console.log(dev);
+    console.log(dev2);
   </script>
 
 </body>
