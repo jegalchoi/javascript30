@@ -22,25 +22,32 @@
     // Interpolated
 
     // Styled
+    console.log('%c I am some great text', 'font-size:50px');
 
     // warning!
-
+    console.warn('oh no');
     // Error :|
-
+    console.error('shit');
     // Info
-
+    console.info('hi');
     // Testing
+    const p = document.querySelector('p');
 
+    console.assert(p.classList.contains('ouch'), 'that is wrong!');
     // clearing
-
+    //console.clear();
     // Viewing DOM Elements
-
+    console.dir(p);
     // Grouping together
-
+    console.group()
+    console.groupEnd()
     // counting
-
+    console.count();
     // timing
+    console.time('hi');
+    console.timeEnd('hi')
 
+    console.table();
   </script>
 </body>
 </html>
